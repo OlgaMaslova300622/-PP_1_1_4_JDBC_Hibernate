@@ -7,26 +7,30 @@ import jm.task.core.jdbc.util.Util;
 
 public class Main {
 
-    private final static UserService userService = new UserServiceImpl();
+     private final static UserService userService = new UserServiceImpl();
 
 
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
-      //  Util util = new Util();
-      //  util.getConnection();
+
+      // util.getConnection();
+
+      // Util.getSessionFactory().openSession();
+
+
 
         userService.createUsersTable();
 
-        userService.saveUser("Алексей", "Владыкин", (byte) 37);
-        userService.saveUser("Заур", "Трегулов", (byte) 35);
-        userService.saveUser("Герман", "Севостьянов", (byte) 26);
-        userService.saveUser("Наиль", "Алишев", (byte) 26);
+       userService.saveUser("Алексей", "Владыкин", (byte) 37);
+       userService.saveUser("Заур", "Трегулов", (byte) 35);
+       userService.saveUser("Герман", "Севостьянов", (byte) 26);
+       userService.saveUser("Наиль", "Алишев", (byte) 26);
 
-        userService.removeUserById(1);
+       userService.removeUserById(1);
 
-        userService.getAllUsers();
+       userService.getAllUsers();
 
-        userService.cleanUsersTable();
+       userService.cleanUsersTable();
 
         userService.dropUsersTable();
     }
